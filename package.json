@@ -1,32 +1,45 @@
 {
-  "name": "kyt-website",
-  "version": "0.1.0",
-  "description": "This repository is displayed at kyt.life",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint '**/*.js'",
-    "lint:fix": "prettier-eslint-cli '**/*.js' --write"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kytlife/kyt-website.git"
-  },
-  "keywords": [],
-  "author": "Jason",
-  "license": "",
-  "bugs": {
-    "url": "https://github.com/kytlife/kyt-website/issues"
-  },
-  "homepage": "https://github.com/kytlife/kyt-website#readme",
-  "devDependencies": {
-    "eslint": "^7.25.0",
-    "eslint-config-standard": "^16.0.2",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.3.1",
-    "eslint-plugin-vue": "^7.9.0",
-    "prettier-eslint": "^12.0.0",
-    "prettier-eslint-cli": "^5.0.1"
-  }
+    "name": "kyt-website",
+    "version": "0.1.0",
+    "description": "This repository is displayed at kyt.life",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "eslint '**/*.js'",
+        "lint:fix": "prettier-eslint-cli '**/*.js' --write"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.js": [
+            "npm run lint:fix",
+            "git add"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kytlife/kyt-website.git"
+    },
+    "keywords": [],
+    "author": "Jason",
+    "license": "",
+    "bugs": {
+        "url": "https://github.com/kytlife/kyt-website/issues"
+    },
+    "homepage": "https://github.com/kytlife/kyt-website#readme",
+    "devDependencies": {
+        "eslint": "^7.25.0",
+        "eslint-config-standard": "^16.0.2",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^4.3.1",
+        "eslint-plugin-vue": "^7.9.0",
+        "husky": "^6.0.0",
+        "lint-staged": "^10.5.4",
+        "prettier-eslint": "^12.0.0",
+        "prettier-eslint-cli": "^5.0.1"
+    }
 }
