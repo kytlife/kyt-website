@@ -6,7 +6,8 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "lint": "eslint '**/*.js'",
-        "lint:fix": "prettier-eslint-cli '**/*.js' --write"
+        "lint:fix": "prettier-eslint-cli '**/*.js' --write",
+        "deploy": "gh-pages -d src"
     },
     "husky": {
         "hooks": {
@@ -29,7 +30,7 @@
     "bugs": {
         "url": "https://github.com/kytlife/kyt-website/issues"
     },
-    "homepage": "https://github.com/kytlife/kyt-website#readme",
+    "homepage": "https://github.com/kytlife/kyt-website",
     "devDependencies": {
         "eslint": "^7.25.0",
         "eslint-config-standard": "^16.0.2",
@@ -41,5 +42,8 @@
         "lint-staged": "^10.5.4",
         "prettier-eslint": "^12.0.0",
         "prettier-eslint-cli": "^5.0.1"
+    },
+    "dependencies": {
+        "gh-pages": "^3.1.0"
     }
 }
