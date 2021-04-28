@@ -1,24 +1,68 @@
 {
-  "name": "kyt-website",
-  "version": "0.1.0",
-  "description": "This repository is displayed at kyt.life",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint '**/*.js'",
-    "lint:fix": "prettier-eslint-cli '**/*.js' --write",
-    "deploy": "npm run build && gh-pages -d dist",
-    "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
-    "build:assets": "node scripts/build-assets.js",
-    "build:pug": "node scripts/build-pug.js",
-    "build:scripts": "node scripts/build-scripts.js",
-    "build:scss": "node scripts/build-scss.js",
-    "clean": "node scripts/clean.js",
-    "start": "npm run build && node scripts/start.js",
-    "start:debug": "npm run build && node scripts/start-debug.js"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
+    "name": "kyt-website",
+    "version": "0.1.0",
+    "description": "This repository is displayed at kyt.life",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "eslint '**/*.js'",
+        "lint:fix": "prettier-eslint-cli '**/*.js' --write",
+        "deploy": "gh-pages -d src",
+        "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
+        "build:assets": "node scripts/build-assets.js",
+        "build:pug": "node scripts/build-pug.js",
+        "build:scripts": "node scripts/build-scripts.js",
+        "build:scss": "node scripts/build-scss.js",
+        "clean": "node scripts/clean.js",
+        "start": "npm run build && node scripts/start.js",
+        "start:debug": "npm run build && node scripts/start-debug.js"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.js": [
+            "npm run lint:fix",
+            "git add"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kytlife/kyt-website.git"
+    },
+    "keywords": [],
+    "author": "Jason",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/kytlife/kyt-website/issues"
+    },
+    "homepage": "https://github.com/kytlife/kyt-website",
+    "devDependencies": {
+        "autoprefixer": "10.2.5",
+        "browser-sync": "2.26.14",
+        "chokidar": "3.5.1",
+        "concurrently": "6.0.0",
+        "eslint": "^7.25.0",
+        "eslint-config-standard": "^16.0.2",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^4.3.1",
+        "eslint-plugin-vue": "^7.9.0",
+        "gh-pages": "^3.1.0",
+        "husky": "^6.0.0",
+        "lint-staged": "^10.5.4",
+        "postcss": "8.2.9",
+        "prettier": "2.2.1",
+        "prettier-eslint": "^12.0.0",
+        "prettier-eslint-cli": "^5.0.1",
+        "pug": "3.0.2",
+        "sass": "1.32.8",
+        "shelljs": "0.8.4",
+        "upath": "2.0.1"
+    },
+    "dependencies": {
+        "bootstrap": "4.6.0"
     }
   },
   "lint-staged": {
