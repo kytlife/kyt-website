@@ -28,16 +28,18 @@ html(lang='en')
         // Masthead
         header.masthead
             .container.d-flex.flex-column.min-vh-100.align-items-center
-
                 .mt-auto.text-center
-                    h1.mx-auto.my-0.text-uppercase Kyt 
-                    h2.text-white-50.mx-auto.mt-2.mb-5 We're working hard to finish developing this site; in the meantime, sign up for Kyt's mailing list!
-                    .container
-                        .col-md-10.col-lg-8.mx-auto.text-center
-                            form.form-inline.d-flex
-                                input#inputEmail.form-control.flex-fill.mr-0.mr-sm-2.mb-3.mb-sm-0(type='email', placeholder='Enter email address...')
-                                button.btn.btn-primary.mx-auto(type='submit') Subscribe
-                footer.footer.mt-auto.small.text-center.text-white-50
+                    img.logo(src="./assets/svg/kyt.svg")
+                    .container(id="preform",name="preform")
+                        div(id="intouch", class="text-center", style="display:none;") We'll be in touch!
+                        .container(id="gform",name="gform")
+                            h2.mx-auto.mt-2.mb-5 We're working hard to finish developing this site; in the meantime, sign up for Kyt's mailing list!
+                            .col-md-10.col-lg-8.mx-auto.text-center
+                                form.form-inline.d-flex(class="", action="https://docs.google.com/forms/d/e/1FAIpQLSfO2n82VaB0oD8Bfw-29ruAgmZ_qwZgeYHCt30Mx56oVkAyrA/formResponse?", target="hidden_iframe", onsubmit="submitted=true;")
+                                    input.form-control.flex-fill.mr-0.mr-sm-2.mb-3.mb-sm-0(type='email', placeholder='Enter email address...', name="entry.1527430613", id="entry.1527430613")
+                                    button.btn.btn-primary.mx-auto(type='submit') Subscribe
+                                iframe(name="hidden_iframe", id="hidden_iframe", style="display:none;", onload="if(submitted) {}")
+                footer.footer.mt-auto.small.text-center
                     | Copyright &copy; Kyt 2021
 
         // Bootstrap core JS
