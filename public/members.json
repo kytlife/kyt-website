@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Aquil Fannis",
+    "id": 1,
+    "experience": "MBA Cadidate at UC Berkeley",
+    "img_path": "aquil.png",
+    "position": "Data, product, wellness"
+  },
+  {
+    "name": "Marlene Kuhn",
+    "id": 2,
+    "img_path": "marlene.png",
+    "experience": "Global Advisor + Design/Brand Strategy Consultant  at Praava Health",
+    "position": "Design, brand, healthcare, sustainability, education Praava Health, MIT, Perkins+Will, DEGW Wellesley College, MIT, UC Berkeley"
+  },
+  {
+    "name": "Erika Vizcarrondo",
+    "id": 3,
+    "img_path": "erika.png",
+    "experience": "TODO: Experience",
+    "position": "TODO: Position"
+  },
+  {
+    "name": "Vasu Panicker",
+    "id": 4,
+    "img_path": "vasu.png",
+    "experience": "MBA Cadidate at UC Berkeley",
+    "position": "Arts, nonprofit management, education"
+  },
+  {
+    "name": "Dom Djannesari",
+    "id": 5,
+    "img_path": "dom.png",
+    "experience": "TODO: Experience",
+    "position": "TODO: Position"
+  },
+  {
+    "name": "Alex Trombetta",
+    "id": 6,
+    "img_path": "alex.png",
+    "experience": "MBA/MPH Candidate at UC Berkeley",
+    "position": "Management Consulting, Healthcare, Biopharma, Boston College, Flare Capital VC Fellow,"
+  },
+  {
+    "name": "Jason Villanueva",
+    "id": 7,
+    "experience": "BS in Computer Science at MIT",
+    "position": "Full Stack Developer"
+  }
+]

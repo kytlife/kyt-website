@@ -1,7 +1,6 @@
 <template>
-  <b-container id="about">
-    <navbar></navbar>
-    <b-row align-v="center"></b-row>
+  <b-container>
+    <navbar></navbar> <b-container id="team" class="mx-auto"></b-container>
   </b-container>
 </template>
 
